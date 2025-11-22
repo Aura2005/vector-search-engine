@@ -1,0 +1,15 @@
+square distance is good for ordering and speed
+because d < e is will true for d^2 < e^2
+distance is good for actual similarity scales
+distance is nothing but resultant magnitude
+squared distance exaggerates differences so its good for heavily punishing errors.
+Imagine a taxi in Manhattan (a grid-like city).
+You can’t go diagonally — only horizontal + vertical paths.
+So instead of “straight line distance” (Euclidean), you measure:
+how far sideways +
+how far up/down
+you need to go.
+That’s why it’s called Manhattan or Taxicab distance.
+So, if you draw all vectors whose Euclidean distance = constant, you get a circle.
+For manhattan if you plot in 2d such that manhattan distance is same, it will form a diamond pattern it wont a curve because its an absolute
+difference between coordinates
