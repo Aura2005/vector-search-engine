@@ -1,0 +1,52 @@
+Requirement:
+Input string -> search for similar **meaning** string -> get the result
+basically a search engine
+
+Looking for types of search engine:
+a. Vector Search engine (uses vector embedding to represent data)
+b. Traditional Keyword based (keyword matching and ranking algorithms)
+c. ANN search (Approximate Nearest Neightbour) (Real world vector search engine rely on ANN mostly)
+and so on...
+
+Final decision:
+**Vector Search Engine**
+
+Understanding the working flow of Vector Search Engine
+Input string -> convert to vector -> apply similarility checks with every existing vectors -> fetch the id -> get the result
+
+At the moment input will restricted to String (highly flexible)
+convert to vector -> requires open source text embeddings
+
+Looking for open source text embeddings
+Google: "list of all the open source text embedding models free (string to vectors) java"
+List:
+    Sentence Transformer Models (all-minilm-l6-v2, all-mpnet-base-v2)
+    BAAI general embedding (multilingual support)
+    and a lot more
+
+For now we are fine with English input only so **all-MiniLM-L6-v2** for text embedding
+
+how to integrate this model?
+    Libraries:
+    a. LangChain4j
+    b. DLJ (Deep Java Library)
+
+Sticking with DJL, has really good documentation (though felt they lacked proper example implementations but overall its good)
+
+now how do I add this pretrained model 'all-MiniLM-l6-v2' hmm in the project?
+Google Search: "how to use all-minilm-l6-v2 in java using DJL library"
+Really appreciate this the first person's reference:
+"https://stackoverflow.com/questions/76277911/how-to-use-pretrained-hugging-face-all-minilm-l6-v2-mode-using-java-deep-java-li"
+"https://github.com/deepjavalibrary/djl-demo/blob/master/huggingface/nlp/src/main/java/com/examples/TextEmbedding.java" this is what I actually
+needed to set up all-minilm-l6-v2 model.
+
+Testing out the example in the project
+EmbeddingTest.java
+
+Problem: How to import the DJL library in the project in order to use its packages.
+okay it was quite easier to do, just add implementations in build.gradle dependencies
+
+djl && djl-demo (for examples) github
+
+
+

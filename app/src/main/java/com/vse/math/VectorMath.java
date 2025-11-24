@@ -1,7 +1,5 @@
 package com.vse.math;
 
-import com.vse.math.Vector;
-
 class InvalidDimensions extends RuntimeException {
     public InvalidDimensions(String message) {
         super(message);

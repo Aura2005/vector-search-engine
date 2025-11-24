@@ -6,13 +6,13 @@ public class Vector {
     private final float[] coordinates;
     private final float magnitude;
 
-    Vector() {
+    public Vector() {
         this.dimensions = DEFAULT_DIMENSIONS;
         this.coordinates = new float[this.dimensions];
         this.magnitude = 0.0f;
     }
 
-    Vector(float... args) {
+    public Vector(float... args) {
         this.dimensions = args.length;
         this.coordinates = new float[this.dimensions];
         System.arraycopy(args, 0, this.coordinates, 0, args.length);

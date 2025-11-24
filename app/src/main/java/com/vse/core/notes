@@ -13,3 +13,8 @@ That’s why it’s called Manhattan or Taxicab distance.
 So, if you draw all vectors whose Euclidean distance = constant, you get a circle.
 For manhattan if you plot in 2d such that manhattan distance is same, it will form a diamond pattern it wont a curve because its an absolute
 difference between coordinates
+
+
+https://docs.djl.ai/master/docs/get.html
+hrs of reading
+
