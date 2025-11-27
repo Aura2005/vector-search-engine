@@ -1,4 +1,4 @@
-package com.vse.store;
+package com.vse;
 
 
 class InvalidCapacity extends RuntimeException {
@@ -36,7 +36,7 @@ public class VectorHeap {
         this.heap[i2] = temp;
     }
 
-    public void insert(float value) {
+    public int insert(float value) {
         if(this.size < heap.length) {
             this.heap[this.size] = value;
             this.size++;
@@ -47,6 +47,12 @@ public class VectorHeap {
                 this.downHeap(0);
             }
         }
+        java.util.HashMap<Float, Integer> map = new java.util.HashMap<>();
+        for(int i = 0; i < this.heap.length; i++) {
+            map.put(this.heap[i], i);
+        }
+        if(map.get(value) == null) return -1;
+        else return map.get(value);
     }
 
     private void downHeap(int index) {

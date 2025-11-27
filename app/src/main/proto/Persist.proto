@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.vse.store;
+
+// Message representing a Vector
+message KeyedVector {
+  string strings = 1;
+  repeated float coordinates = 2;
+}
+
+
+// Top-level message to hold both string array and vector array
+message Data {
+  repeated KeyedVector keyedVectors = 1;
+}
+

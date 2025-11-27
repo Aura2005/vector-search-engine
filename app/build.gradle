@@ -8,6 +8,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
+    id 'com.google.protobuf' version '0.9.5'
 }
 
 repositories {
@@ -16,12 +18,15 @@ repositories {
 }
 
 dependencies {
-    implementation platform("ai.djl:bom:0.35.0")
-    implementation "ai.djl:api:0.35.0"
-    implementation "ai.djl.huggingface:tokenizers:0.35.0"
-    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.35.0"
-    runtimeOnly "ai.djl.pytorch:pytorch-model-zoo:0.35.0"
+    implementation platform('ai.djl:bom:0.35.0')
+    implementation 'ai.djl:api:0.35.0'
+    implementation 'ai.djl.huggingface:tokenizers:0.35.0'
+    implementation 'com.google.protobuf:protobuf-java:4.33.1'   
+    compileOnly 'com.google.protobuf:protoc:4.33.1'  
+    runtimeOnly 'ai.djl.pytorch:pytorch-engine:0.35.0'
+    runtimeOnly 'ai.djl.pytorch:pytorch-model-zoo:0.35.0'
 }
+
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {

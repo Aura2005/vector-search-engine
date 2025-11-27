@@ -1,4 +1,4 @@
-package com.vse.model;
+package com.vse;
 
 import ai.djl.ModelException;
 import ai.djl.huggingface.translator.TextEmbeddingTranslatorFactory;
@@ -9,8 +9,6 @@ import ai.djl.training.util.ProgressBar;
 import ai.djl.translate.TranslateException;
 
 import java.io.IOException;
-
-import com.vse.math.Vector;
 
 public class Embedding {
     ZooModel<String, float[]> model;

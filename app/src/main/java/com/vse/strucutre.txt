@@ -1,0 +1,64 @@
+VectorSearchEngine/
+├── build/
+│   ├── classes/
+│   ├── distributions/
+│   ├── libs/
+│   ├── reports/
+│   └── tmp/
+├── gradle/
+│   ├── wrapper/
+│   └── build.gradle.kts
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   └── vectors/
+│   │   │   │       ├── api/
+│   │   │   │       │   ├── VectorSearchController.java
+│   │   │   │       │   └── SearchResult.java
+│   │   │   │       ├── core/
+│   │   │   │       │   ├── Vector.java
+│   │   │   │       │   ├── VectorEngine.java
+│   │   │   │       │   ├── VectorIndex.java
+│   │   │   │       │   └── VectorSearch.java
+│   │   │   │       ├── storage/
+│   │   │   │       │   ├── VectorDatabase.java
+│   │   │   │       │   └── VectorPersistence.java
+│   │   │   │       ├── util/
+│   │   │   │       │   ├── VectorUtils.java
+│   │   │   │       │   ├── FileUtils.java
+│   │   │   │       │   └── LoggingUtil.java
+│   │   │   │       └── config/
+│   │   │   │           ├── AppConfig.java
+│   │   │   │           └── VectorSearchConfig.java
+│   │   │   └── resources/
+│   │   │       ├── application.properties
+│   │   │       ├── logback.xml
+│   │   │       └── vectors/
+│   │   │           └── vector_data.csv
+│   │   └── kotlin/
+│   │       └── com/
+│   │           └── vectors/
+│   │               ├── VectorProcessor.kt
+│   │               ├── SearchQueryBuilder.kt
+│   │               └── VectorSearchService.kt
+│   ├── test/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   └── vectors/
+│   │   │   │       ├── core/
+│   │   │   │       │   ├── VectorTest.java
+│   │   │   │       │   └── VectorEngineTest.java
+│   │   │   │       ├── api/
+│   │   │   │       │   ├── VectorSearchControllerTest.java
+│   │   │   │       │   └── SearchResultTest.java
+│   │   │   │       └── storage/
+│   │   │   │           └── VectorDatabaseTest.java
+│   │   └── resources/
+│   │       └── test_config.properties
+├── .gitignore
+├── gradle.properties
+├── settings.gradle.kts
+├── Dockerfile
+├── README.md
+└── LICENSE
